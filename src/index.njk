@@ -1,0 +1,170 @@
+---
+permalink: /index.html
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdullah Memon, AI Engineer</title>
+<meta name="description" content="AI engineer in Hyderabad, Pakistan, working remotely. LLM evaluation, verification and RAG, in Python and TypeScript.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Abdullah Memon, AI Engineer">
+<meta property="og:description" content="AI engineer in Hyderabad, Pakistan, working remotely. LLM evaluation, verification and RAG, in Python and TypeScript.">
+<meta property="og:url" content="https://azterizm.com/">
+<link rel="canonical" href="https://azterizm.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111'/%3E%3Ctext x='16' y='21.5' font-family='Helvetica,Arial,sans-serif' font-size='14' font-weight='700' fill='%23fff' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #111111;
+    --muted: #555555;
+    --rule: #e2e2e2;
+    --link: #0b4f9c;
+    --quote: #f6f6f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111214;
+      --text: #ececec;
+      --muted: #a2a2a2;
+      --rule: #2c2d30;
+      --link: #8ab4f8;
+      --quote: #1a1b1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 42rem; margin: 0 auto; padding: 56px 16px 64px; }
+  a { color: var(--link); text-underline-offset: 2px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+  .role { font-size: 1.15rem; margin: 4px 0 18px; color: var(--muted); }
+  .meta { color: var(--muted); margin: 0 0 14px; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 0; margin: 0; list-style: none; }
+  h2 {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
+    border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin: 44px 0 16px;
+  }
+  h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+  p { margin: 0 0 12px; }
+  .entry { margin: 0 0 26px; }
+  .head { display: flex; justify-content: space-between; gap: 16px; }
+  .sub { color: var(--muted); margin: 0 0 8px; }
+  .when { color: var(--muted); white-space: nowrap; }
+  ul.items { padding-left: 18px; margin: 0; }
+  ul.items li { margin: 0 0 10px; }
+  .more { margin: 12px 0 0; }
+  blockquote { margin: 0 0 14px; padding: 14px 18px; background: var(--quote); border-radius: 6px; }
+  blockquote p { margin: 0 0 8px; }
+  blockquote footer { color: var(--muted); font-size: 0.95rem; }
+  @media (max-width: 520px) {
+    main { padding-top: 36px; }
+    .head { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Abdullah Memon</h1>
+  <p class="role">AI Engineer</p>
+  <p>AI engineer who designs LLM systems for production and decides by measurement. I fix the method before each test, publish the results including what failed, and change the design on what they show. I work across the stack, from model serving and retrieval to the product users see, in Python and TypeScript.</p>
+  <p class="meta">Hyderabad, Pakistan · Remote, UTC+5</p>
+  <ul class="links">
+    <li><a href="/Abdullah_Memon_CV.pdf">CV (PDF)</a></li>
+    <li><a href="https://github.com/azterizm">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/azterizm">LinkedIn</a></li>
+    <li><a href="https://x.com/azterizm">X</a></li>
+    <li><a href="mailto:abdullah@azterizm.com">abdullah@azterizm.com</a></li>
+  </ul>
+</header>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="head"><h3>AI Engineer, Memon Systems Ltd</h3><span class="when">Jun 2026 – present</span></div>
+    <p class="sub">UK. Independent R&amp;D lab. Remote</p>
+    <ul class="items">
+      <li>Built a verifier that checks each sentence of an LLM answer as it is written and rewrites only the sentences that fail. It cut answers containing a wrong sentence by 86% when the model answered from its own knowledge, and by 48% with the source documents provided, refusing 7% and 4% of questions. Python package on PyPI. <a href="https://github.com/azterizm/legal-rag-verifier">code and results</a></li>
+      <li>Built a rewrite step for second-model checks on Claude and Gemini, so a rejected sentence is corrected against the source instead of deleted. It kept 71 of the 80 correct sentences the check had deleted, with wrong sentences held within the margin set before the run. <a href="https://github.com/azterizm/legal-rag-verifier/blob/main/docs/measurements.md#rewrite-instead-of-drop-stop-74-2026-10-23-method-in-docsgridmd">results</a></li>
+      <li>Tested Qwen 27B, self-hosted on one GPU, against the Jev and OpenAI decision APIs as a sentence judge, on 513 hand-graded sentences. On the first test it scored 93.8%, against 90.7% and 89.0%. <a href="https://github.com/azterizm/legal-rag-verifier/blob/main/docs/measurements.md#two-hosted-decision-apis-as-the-judge-stop-66-2026-10-13-method-in-docsgridmd">method and results</a></li>
+      <li>Built a rule-based router that sends each query to the exact legal source it cites before vector search runs, with no model call. 0 of 1,897 citations went to the wrong source, and 4.3% were refused. <a href="https://github.com/azterizm/legal-rag-router">code and results</a></li>
+      <li>Designed retrieval that keeps client data on the device and fetches public law through private information retrieval. It leaked 0 private tokens to the cloud, against 16 for standard cloud RAG. <a href="https://github.com/azterizm/blind-counsel">design and results</a></li>
+    </ul>
+    <p class="more"><a href="https://memonsystems.com/tools/">All open-source projects</a></p>
+  </div>
+
+  <div class="entry">
+    <div class="head"><h3>Full Stack Developer, Odesign</h3><span class="when">Nov 2022 – Oct 2025</span></div>
+    <p class="sub">Agency in Ontario, Canada. Remote contract</p>
+    <ul class="items">
+      <li>Built and launched Brainy Page in October 2024, an AI writing assistant that suggests text inside the editor through OpenAI.</li>
+      <li>Moved <a href="https://cricutny.com">Cricutny</a>, a subscription platform with 20,000 sign-ups and 150 to 350 new subscribers a month, from a repeatedly breached WordPress install to Remix with zero downtime. Zero security incidents from January 2023 to October 2025. <a href="https://memonsystems.com/case-studies/wordpress-chaos/">case study</a></li>
+      <li>Built an email verification pipeline in mid 2025 that put accuracy ahead of speed, sending every address the fast checks could not settle to a full mailbox check. Load-tested it at 5 million emails across 5 concurrent jobs in under 12 hours on a single budget server. Odesign released it as <a href="https://mxverify.io">MX Verify</a>, which I built end to end on a follow-on contract, Nov 2025 – Feb 2026. <a href="https://memonsystems.com/case-studies/email-verification/">case study</a></li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="head"><h3>Software Engineer</h3><span class="when">Sep 2021 – Mar 2026</span></div>
+    <p class="sub">Independent contractor. Remote</p>
+    <ul class="items">
+      <li>Built MedCareerClinic end to end for a founder in Perth, Nov 2025 – Feb 2026. AI mock interviews and interview coaching on Gemini, with every model reply checked against a schema. Also built Email2Obsidian for the same founder.</li>
+      <li>Built Genaro, a multi-tenant studio management platform with Zoom classes and attendance tracking, to replace WellnessLiving for a yoga and fitness business.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="head"><h3>BS Information Technology, University of Sindh</h3><span class="when">Apr 2025</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Write-ups</h2>
+  <ul class="items">
+    <li><a href="https://memonsystems.com/journal/in-flight-rollback-on-sglang-measured-against-gemini-and-claude-opus/">In-Flight Rollback on SGLang: A Sentence-Level Check Cut Wrong Legal Answers From Memory by 83 to 86%</a> <span class="when">19 Oct 2026</span></li>
+    <li><a href="https://memonsystems.com/journal/what-failed-in-my-own-controls/">What Failed in My Own Controls: Seven Results From October 2026</a> <span class="when">17 Oct 2026</span></li>
+    <li><a href="https://memonsystems.com/journal/legal-rag-router-deterministic-citation-routing-for-uk-legal-rag/">legal-rag-router: Deterministic Citation Routing for UK Legal RAG, Measured Against Gemini, Jev and Laya</a> <span class="when">2 Oct 2026</span></li>
+  </ul>
+  <p class="more"><a href="https://memonsystems.com/journal/">All write-ups</a></p>
+</section>
+
+<section>
+  <h2>Video</h2>
+  <p><a href="https://www.youtube.com/watch?v=z6It-VtC8bo&amp;t=616s">Why Closed Frontier APIs Fail at Legal AI</a>, 10:16 to 12:11. The verifier checks each sentence as it is generated, rolls back a contradiction and regenerates it from the statute text, and after three retries shows the user which sentence has no support.</p>
+  <p class="more"><a href="https://www.youtube.com/channel/UC58UTcadMRPqxiMF5K6BbkQ">All videos</a></p>
+</section>
+
+<section>
+  <h2>Clients</h2>
+  <blockquote>
+    <p>I've had the pleasure of working with Abdullah for several years, and I can confidently say he is a rare gem in the programming world. His talent, patience, and unwavering dedication to his work truly set him apart. Together, we've tackled some amazing projects, and I wouldn't hesitate to collaborate with him again!</p>
+    <footer>Peter Young, Odesign, Ontario, Canada</footer>
+  </blockquote>
+  <blockquote>
+    <p>Abdullah is easily one of the best I've had the good fortune to work with. He's extremely knowledgeable and a great, approachable communicator.</p>
+    <footer>Jake Cheung, Cambridge, UK</footer>
+  </blockquote>
+  <blockquote>
+    <p>Finding someone who consistently complies with all your requirements is not easy... However, I was lucky having Abdullah working on my project, which he accomplished with dignity. I am happy he continues constant support of the application he developed for our company.</p>
+    <footer>Giorgi Lekiashvili, Best Shop Group, Tbilisi, Georgia</footer>
+  </blockquote>
+  <blockquote>
+    <p>The knowledge he has of nodejs is beyond anything what I could've wished for. He did not only complete my project but improvised into making it much better.</p>
+    <footer>Gaurav N., Bug Bounty Hunter Ltd, Mumbai, India</footer>
+  </blockquote>
+</section>
+
+</main>
+</body>
+</html>

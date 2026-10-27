@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Abdullah Memon, AI Engineer</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 9.8pt/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #111; }
+  a { color: #0b4f9c; text-decoration: none; }
+  h1 { font-size: 20pt; margin: 0; letter-spacing: 0.02em; }
+  .tagline { font-size: 11pt; margin: 2px 0 6px; color: #333; }
+  .contact { font-size: 9pt; color: #333; }
+  .contact span + span::before { content: " · "; color: #999; }
+  h2 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.1em; color: #555; border-bottom: 1px solid #ccc; padding-bottom: 2px; margin: 16px 0 7px; }
+  .entry { margin: 0 0 11px; break-inside: avoid; }
+  .head { display: flex; justify-content: space-between; gap: 12px; }
+  .when { white-space: nowrap; color: #444; }
+  ul { margin: 4px 0 0; padding-left: 15px; }
+  li { margin: 0 0 4px; }
+  p { margin: 0 0 4px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Abdullah Memon</h1>
+  <div class="tagline">AI Engineer</div>
+  <div class="contact">
+    <span><a href="mailto:abdullah@azterizm.com">abdullah@azterizm.com</a></span><!--PHONE-->
+    <span>Hyderabad, Pakistan · Remote, UTC+5</span>
+  </div>
+  <div class="contact">
+    <span><a href="https://azterizm.com">azterizm.com</a></span>
+    <span><a href="https://github.com/azterizm">github.com/azterizm</a></span>
+    <span><a href="https://www.linkedin.com/in/azterizm">linkedin.com/in/azterizm</a></span>
+    <span><a href="https://memonsystems.com">memonsystems.com</a></span>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p>AI engineer who designs LLM systems for production and decides by measurement. I fix the method before each test, publish the results including what failed, and change the design on what they show. I work across the stack, from model serving and retrieval to the product users see, in Python and TypeScript.</p>
+
+<h2>Experience</h2>
+<div class="entry">
+  <div class="head"><span><b>AI Engineer, Memon Systems Ltd</b>, UK. Independent R&amp;D lab. Remote</span><span class="when">Jun 2026 – present</span></div>
+  <ul>
+    <li>Built a verifier that checks each sentence of an LLM answer as it is written and rewrites only the sentences that fail. It cut answers containing a wrong sentence by 86% when the model answered from its own knowledge, and by 48% with the source documents provided, refusing 7% and 4% of questions. Python package on PyPI. <a href="https://github.com/azterizm/legal-rag-verifier">code and results</a></li>
+    <li>Built a rewrite step for second-model checks on Claude and Gemini, so a rejected sentence is corrected against the source instead of deleted. It kept 71 of the 80 correct sentences the check had deleted, with wrong sentences held within the margin set before the run. <a href="https://github.com/azterizm/legal-rag-verifier/blob/main/docs/measurements.md#rewrite-instead-of-drop-stop-74-2026-10-23-method-in-docsgridmd">results</a></li>
+    <li>Built a rule-based router that sends each query to the exact legal source it cites before vector search runs, with no model call. 0 of 1,897 citations went to the wrong source, and 4.3% were refused. <a href="https://github.com/azterizm/legal-rag-router">code and results</a></li>
+    <li>Designed retrieval that keeps client data on the device and fetches public law through private information retrieval. It leaked 0 private tokens to the cloud, against 16 for standard cloud RAG. <a href="https://github.com/azterizm/blind-counsel">design and results</a></li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span><b>Full Stack Developer, Odesign</b>, agency in Ontario, Canada. Remote contract</span><span class="when">Nov 2022 – Oct 2025</span></div>
+  <ul>
+    <li>Built and launched Brainy Page in October 2024, an AI writing assistant that suggests text inside the editor through OpenAI.</li>
+    <li>Moved <a href="https://cricutny.com">Cricutny</a>, a subscription platform with 20,000 sign-ups and 150 to 350 new subscribers a month, from a repeatedly breached WordPress install to Remix with zero downtime. Zero security incidents from January 2023 to October 2025. <a href="https://memonsystems.com/case-studies/wordpress-chaos/">case study</a></li>
+    <li>Built an email verification pipeline in mid 2025 that put accuracy ahead of speed, sending every address the fast checks could not settle to a full mailbox check. Load-tested it at 5 million emails across 5 concurrent jobs in under 12 hours on a single budget server. Odesign released it as <a href="https://mxverify.io">MX Verify</a>, which I built end to end on a follow-on contract, Nov 2025 – Feb 2026. <a href="https://memonsystems.com/case-studies/email-verification/">case study</a></li>
+  </ul>
+</div>
+<div class="entry">
+  <div class="head"><span><b>Software Engineer</b>, independent contractor. Remote</span><span class="when">Sep 2021 – Mar 2026</span></div>
+  <ul>
+    <li>Built MedCareerClinic end to end for a founder in Perth, Nov 2025 – Feb 2026. AI mock interviews and interview coaching on Gemini, with every model reply checked against a schema. Also built Email2Obsidian for the same founder.</li>
+    <li>Built Genaro, a multi-tenant studio management platform with Zoom classes and attendance tracking, to replace WellnessLiving for a yoga and fitness business.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="head"><span><b>BS Information Technology</b>, University of Sindh, Jamshoro</span><span class="when">Apr 2025</span></div>
+</div>
+
+</body>
+</html>
