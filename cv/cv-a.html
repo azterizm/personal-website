@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <title>Abdullah Memon, AI Engineer</title>
 <style>
-  @page { size: A4; margin: 14mm 16mm; }
+  @page { size: A4; margin: 12mm 16mm; }
   * { box-sizing: border-box; }
-  body { margin: 0; font: 9.8pt/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #111; }
+  body { margin: 0; font: 9.8pt/1.45 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #111; }
   a { color: #0b4f9c; text-decoration: none; }
   h1 { font-size: 20pt; margin: 0; letter-spacing: 0.02em; }
   .tagline { font-size: 11pt; margin: 2px 0 6px; color: #333; }
   .contact { font-size: 9pt; color: #333; }
   .contact span + span::before { content: " · "; color: #999; }
-  h2 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.1em; color: #555; border-bottom: 1px solid #ccc; padding-bottom: 2px; margin: 16px 0 7px; }
+  h2 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.1em; color: #555; border-bottom: 1px solid #ccc; padding-bottom: 2px; margin: 12px 0 7px; }
   .entry { margin: 0 0 11px; break-inside: avoid; }
   .head { display: flex; justify-content: space-between; gap: 12px; }
   .when { white-space: nowrap; color: #444; }
   ul { margin: 4px 0 0; padding-left: 15px; }
-  li { margin: 0 0 4px; }
+  li { margin: 0 0 3px; }
   p { margin: 0 0 4px; }
 </style>
 </head>
@@ -42,24 +42,25 @@
 </header>
 
 <h2>Summary</h2>
-<p>I design LLM systems for production and decide by measurement. The method is fixed before each test, the results are published including what failed, and the design changes on what they show. My work spans the stack, from model serving and retrieval to the product users see, in Python and TypeScript.</p>
+<p>I design and evaluate LLM systems for production and decide by measurement. The method is fixed before each test, the results are published including what failed, and the design changes on what they show. My work spans the stack, from model serving and retrieval to the product users see, in Python and TypeScript.</p>
 <p>On client products I also ran the servers, deployments, databases and security incidents. Each one shipped with an admin panel, role-based access and documentation, so the founder could run it without me.</p>
 
 <h2>Experience</h2>
 <div class="entry">
   <div class="head"><span><b>AI Engineer, Memon Systems Ltd</b>, UK. Independent R&amp;D lab. Remote</span><span class="when">Jun 2026 – present</span></div>
   <ul>
-    <li>Built a verifier that catches wrong statements in LLM answers as they are written. It checks each sentence against its source and rewrites the ones that fail. On UK law questions it cut answers containing a wrong statement by up to 86%, while still answering at least 93% of questions. Its rule-based checks also run as an <a href="https://github.com/azterizm/answer-check-mcp">MCP server</a> that AI agents call before they reply. <a href="https://github.com/azterizm/legal-rag-verifier">code and results</a></li>
+    <li>Built a verifier that catches wrong statements in LLM answers as they are written. It checks each sentence against its source and rewrites the ones that fail, by rolling back the KV cache on an SGLang server. On UK law questions it cut answers containing a wrong statement by up to 86%, while still answering at least 93% of questions. Its rule-based checks also run as an <a href="https://github.com/azterizm/answer-check-mcp">MCP server</a> that AI agents call before they reply. <a href="https://github.com/azterizm/legal-rag-verifier">code and results</a></li>
     <li>Built a router that sends a legal question to the exact law it cites, before any search runs and without calling a model. Across 1,897 real citations it never picked the wrong law, and declined the 4% it could not place. <a href="https://github.com/azterizm/legal-rag-router">code and results</a></li>
     <li>Designed private retrieval for legal AI. Client data stays on the laptop, and the cloud serves public law without learning which laws were looked up. In a test on one client matter, standard cloud RAG leaked the client's identity, employer, dates and salary, and this design leaked none. <a href="https://github.com/azterizm/blind-counsel">design and results</a></li>
+    <li>Found bugs in the open-source AI tools <a href="https://github.com/mastra-ai/mastra/issues/28736">Mastra</a>, <a href="https://github.com/hud-evals/hud-python/issues/776">HUD</a> and <a href="https://github.com/tetherto/qvac/pull/5440">QVAC</a>, and their teams merged the fixes.</li>
   </ul>
 </div>
 <div class="entry">
   <div class="head"><span><b>Full Stack Developer, Odesign</b>, agency in Ontario, Canada. Remote contract</span><span class="when">Nov 2022 – Oct 2025</span></div>
   <ul>
     <li>Built and launched Brainy Page in October 2024, an AI writing assistant that suggests text inside the editor through OpenAI.</li>
-    <li>Moved <a href="https://cricutny.com">Cricutny</a>, a subscription platform with 20,000 sign-ups and 150 to 350 new subscribers a month, from a repeatedly breached WordPress install to Remix with zero downtime. It had zero security incidents from January 2023 to October 2025. <a href="https://memonsystems.com/case-studies/wordpress-chaos/">case study</a></li>
-    <li>Built an email verification pipeline in mid 2025 that put accuracy ahead of speed, sending every address the fast checks could not settle to a full mailbox check. Load-tested it at 5 million emails across 5 concurrent jobs in under 12 hours on a single budget server. Odesign released it as <a href="https://mxverify.io">MX Verify</a>, which I built end to end on a follow-on contract, Nov 2025 – Feb 2026. <a href="https://memonsystems.com/case-studies/email-verification/">case study</a></li>
+    <li>Moved <a href="https://cricutny.com">Cricutny</a>, a subscription platform with 20,000 sign-ups and 150 to 350 new subscribers a month, from a repeatedly breached WordPress install to Remix, Prisma and MySQL with zero downtime. It had zero security incidents from January 2023 to October 2025. <a href="https://memonsystems.com/case-studies/wordpress-chaos/">case study</a></li>
+    <li>Built an email verification pipeline in Node.js, with Redis and SQLite, in mid 2025 that put accuracy ahead of speed, sending every address the fast checks could not settle to a full mailbox check. Load-tested it at 5 million emails across 5 concurrent jobs in under 12 hours on a single budget server. Odesign released it as <a href="https://mxverify.io">MX Verify</a>, which I built end to end on a follow-on contract, Nov 2025 – Feb 2026. <a href="https://memonsystems.com/case-studies/email-verification/">case study</a></li>
     <li>Handed every product to another developer at the end of the contract. Odesign has run them since without a question to me.</li>
   </ul>
 </div>
@@ -73,7 +74,7 @@
 
 <h2>Education</h2>
 <div class="entry">
-  <div class="head"><span><b>BS Information Technology</b>, University of Sindh, Jamshoro</span><span class="when">Apr 2025</span></div>
+  <div class="head"><span><b>BS Information Technology</b>, University of Sindh, Jamshoro</span></div>
 </div>
 
 </body>
