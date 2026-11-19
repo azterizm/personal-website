@@ -6,8 +6,8 @@
 #   private/Abdullah_Memon_CV_B_portal.pdf  CV B with the phone from $CV_PHONE (never committed)
 #   private/pk-<city>/Abdullah_Memon_CV.pdf and Abdullah_Memon_CV_B.pdf
 #                                           Pakistan-role copies with the phone: the role's city as
-#                                           the location, no "Remote, UTC+5" and no hire-through-company
-#                                           line. One folder each for Islamabad, Lahore and Karachi
+#                                           the location and no "Remote, UTC+5".
+#                                           One folder each for Islamabad, Lahore, Karachi, Faisalabad and Hyderabad
 set -eu
 cd "$(dirname "$0")"
 CHROME=/Applications/Chromium.app/Contents/MacOS/Chromium
@@ -22,12 +22,12 @@ build() { # $1 source html, $2 public pdf, $3 portal html, $4 portal pdf
 }
 pk() { # $1 source html, $2 pdf name. Needs $CV_PHONE
   [ -n "${CV_PHONE:-}" ] || return 0
-  for city in Islamabad Lahore Karachi; do
+  for city in Islamabad Lahore Karachi Faisalabad Hyderabad; do
     dir="private/pk-$(printf '%s' "$city" | tr '[:upper:]' '[:lower:]')"
     mkdir -p "$dir"
     sed -e "s|<!--PHONE-->|<span>$CV_PHONE</span>|" \
         -e "s|[A-Za-z]*, Pakistan[^<]*|$city, Pakistan|" \
-        -e "/You can hire me full-time on a contract/d" \
+        -e "s|Deployed the agency's client apps on AWS (Lightsail, then EC2), then moved each product to its own|Responsible for production on the agency's client apps: servers, deployments, databases and incidents, including out-of-hours calls, tracing failures from server logs when users gave no detail. Ran them on AWS (Lightsail, then EC2), then moved each product to its own|" \
         "$1" > "$dir/$1"
     render "$dir/$1" "$dir/$2"
   done

@@ -31,9 +31,6 @@
     <span>Islamabad, Pakistan · Remote, UTC+5</span>
   </div>
   <div class="contact">
-    <span>You can hire me full-time on a contract through my UK company, Memon Systems Ltd, or through an employer of record.</span>
-  </div>
-  <div class="contact">
     <span><a href="https://azterizm.com">azterizm.com</a></span>
     <span><a href="https://github.com/azterizm">github.com/azterizm</a></span>
     <span><a href="https://www.linkedin.com/in/azterizm">linkedin.com/in/azterizm</a></span>
@@ -48,18 +45,18 @@
 <div class="entry">
   <div class="head"><span><b>Full Stack Developer, Odesign</b>, agency in Ontario, Canada. Remote contract</span><span class="when">Nov 2022 – Oct 2025</span></div>
   <ul>
-    <li>Moved <a href="https://cricutny.com">Cricutny</a>, a subscription platform with 20,000 sign-ups and 150 to 350 new subscribers a month, from a repeatedly breached WordPress install to Remix and MySQL with zero downtime. It ran on Sequelize first, then on Prisma to make it easier to maintain. It had zero security incidents from January 2023 to October 2025. <a href="https://memonsystems.com/case-studies/wordpress-chaos/">case study</a></li>
+    <li>Moved <a href="https://cricutny.com">Cricutny</a>, a subscription platform with 20,000 sign-ups and 150 to 350 new subscribers a month, from a repeatedly breached WordPress install to Remix and MySQL with zero downtime. It ran on Sequelize first, then on Prisma for easier maintenance. It had zero security incidents from January 2023 to October 2025. <a href="https://memonsystems.com/case-studies/wordpress-chaos/">case study</a></li>
     <li>Built Cricutny's staff, admin and owner panels from scratch, with no CMS underneath, so the founder could change content, run A/B tests and read engagement without a developer. Replaced passwords with magic links and Google sign-in.</li>
     <li>Built an email verification pipeline in Node.js, with Redis queues and SQLite in WAL mode, in mid 2025 that put accuracy ahead of speed, sending every address the fast checks could not settle to a full mailbox check. Load-tested it at 5 million emails across 5 concurrent jobs in under 12 hours on a single budget server. Odesign released it as <a href="https://mxverify.io">MX Verify</a>, which I built end to end on a follow-on contract, Nov 2025 – Feb 2026. <a href="https://memonsystems.com/case-studies/email-verification/">case study</a></li>
-    <li>Cut the monthly hosting bill for a group of client apps by 65% in 2025. The front ends moved to Cloud Run, and the memory-heavy browser and image jobs went behind a BullMQ queue on one 8 GB server, with no downtime during the move. <a href="https://memonsystems.com/case-studies/infrastructure-optimization/">case study</a></li>
-    <li>Built and launched Brainy Page in October 2024, an AI writing assistant that suggests text inside a TipTap editor through OpenAI.</li>
+    <li>Deployed the agency's client apps on AWS (Lightsail, then EC2), then moved each product to its own OVHcloud server with bash deploy scripts. Later designed a Google Cloud Run setup for them that cut the monthly bill by 65% in a measured test. <a href="https://memonsystems.com/case-studies/infrastructure-optimization/">case study</a></li>
+    <li>Built and launched Brainy Page in October 2024, an AI writing assistant that suggests text inside a TipTap editor through the OpenAI API.</li>
     <li>Handed every product to another developer at the end of the contract. Odesign has run them since without a question to me.</li>
   </ul>
 </div>
 <div class="entry">
   <div class="head"><span><b>Software Engineer</b>, independent contractor. Remote</span><span class="when">Sep 2021 – Mar 2026</span></div>
   <ul>
-    <li>Built MedCareerClinic end to end for a founder in Perth, Nov 2025 – Feb 2026, an interview-practice platform for medical careers with AI mock interviews on Gemini, every model reply checked against a schema, and MongoDB for storage. Also built Email2Obsidian for the same founder.</li>
+    <li>Built MedCareerClinic end to end for a founder in Perth, Nov 2025 – Feb 2026, an interview-practice platform for medical careers with AI mock interviews on Gemini, every model reply checked against a schema, and MongoDB for storage. Also built Email2Obsidian for the same founder, packaged as a Docker container.</li>
     <li>Built Genaro, a multi-tenant studio management platform with a two-way Zoom API integration for classes and attendance, to replace WellnessLiving for a yoga and fitness business.</li>
     <li>Built Bright Humans, a scheduling engine that splits commissions through Stripe Connect.</li>
   </ul>
@@ -69,7 +66,7 @@
 <div class="entry">
   <div class="head"><span><b>AI Engineer, Memon Systems Ltd</b>, UK. Independent R&amp;D lab. Remote</span><span class="when">Jun 2026 – present</span></div>
   <ul>
-    <li>Built a verifier that checks each sentence of an LLM answer against its source and rewrites the ones that fail, by rolling back the KV cache on an SGLang server. On UK law questions it cut answers containing a wrong statement by up to 86%, while still answering at least 93% of questions. Its rule-based checks also run as an <a href="https://github.com/azterizm/answer-check-mcp">MCP server</a> that AI agents call before they reply. <a href="https://github.com/azterizm/legal-rag-verifier">code and results</a></li>
+    <li>Built a verifier that checks each sentence of an LLM answer against its source and rewrites the ones that fail, by rolling back the KV cache on an SGLang server. On UK law questions it cut answers containing a wrong statement by up to 86%, while still answering at least 93% of questions. Its rule-based checks run as an <a href="https://github.com/azterizm/answer-check-mcp">MCP server</a>, released on PyPI through GitHub Actions CI/CD, that AI agents call before they reply. <a href="https://github.com/azterizm/legal-rag-verifier">code and results</a></li>
     <li>Found bugs in the open-source AI tools <a href="https://github.com/mastra-ai/mastra/issues/28736">Mastra</a>, <a href="https://github.com/hud-evals/hud-python/issues/776">HUD</a> and <a href="https://github.com/tetherto/qvac/pull/5440">QVAC</a>, and their teams merged the fixes.</li>
   </ul>
 </div>
@@ -77,6 +74,9 @@
 <h2>Education</h2>
 <div class="entry">
   <div class="head"><span><b>BS Information Technology</b>, University of Sindh, Jamshoro</span></div>
+  <ul>
+    <li>Built Montoro, my final-year RAG app, in TypeScript with ChromaDB vector search, the OpenAI API and Redis.</li>
+  </ul>
 </div>
 
 </body>
